@@ -9,9 +9,9 @@ const Navbar = ({ history }) => {
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="container">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
+          <NavLink className="navbar-item" activeClassName="is-active" to="/">
             <img src={logo} width="112" height="28" alt="Brand" />
-          </a>
+          </NavLink>
           <a
             role="button"
             className={`navbar-burger burger ${isOpen && 'is-active'}`}

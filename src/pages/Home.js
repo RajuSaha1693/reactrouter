@@ -1,5 +1,6 @@
 import React from 'react';
 import learningimg from '../images/learning.png';
+import Weather from '../components/Weather/Weather';
 const Home = () => (
   <div>
     <section className="hero is-success">
@@ -9,10 +10,12 @@ const Home = () => (
       </div>
     </section>
     <div className="columns">
-      <div className="column is-four-fifths">
+      <div className="column is-two-thirds">
         <img src={learningimg} alt="learning" />
       </div>
-      <div className="column">Auto</div>
+      <div className="column">
+        <Weather />
+      </div>
     </div>
   </div>
 );
