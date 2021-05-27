@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Profile from './pages/Profile';
+import News from './pages/News';
 function App() {
   return (
     <>
@@ -18,8 +18,8 @@ function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/profile">
-              <Profile />
+            <Route path="/news">
+              <News />
             </Route>
           </Switch>
         </div>

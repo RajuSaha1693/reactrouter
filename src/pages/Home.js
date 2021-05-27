@@ -1,6 +1,7 @@
 import React from 'react';
 import learningimg from '../images/learning.png';
 import Weather from '../components/Weather/Weather';
+import Covid from '../components/RapidApi';
 const Home = () => (
   <div>
     <section className="hero is-success">
@@ -15,6 +16,7 @@ const Home = () => (
       </div>
       <div className="column">
         <Weather />
+        <Covid />
       </div>
     </div>
   </div>

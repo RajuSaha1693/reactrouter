@@ -29,20 +29,20 @@ const Navbar = ({ history }) => {
             <NavLink className="navbar-item" activeClassName="is-active" to="/">
               Home
             </NavLink>
+
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/news"
+            >
+              News
+            </NavLink>
             <NavLink
               className="navbar-item"
               activeClassName="is-active"
               to="/about"
             >
               About
-            </NavLink>
-
-            <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/profile"
-            >
-              Profile
             </NavLink>
           </div>
         </div>

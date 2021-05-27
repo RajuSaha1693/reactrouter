@@ -1,45 +1,26 @@
 import React from 'react';
-import moment from 'moment';
+
 const WeatherCard = ({ weatherData }) => {
   return (
-    <div className="card" style={{ paddingTop: '5px' }}>
-      <header className="card-header has-background-link-dark">
-        <p className="card-header-title has-text-white">Weather </p>
-      </header>
-      <div className="card-content has-background-primary-light has-text-link-dark">
+    <div className="card" style={{ paddingTop: '10px' }}>
+      <div className="card-content card-weather has-text-white">
         <div className="content">
-          <div className="columns">
-            <div className="column">
-              <b>
-                {moment().format('dddd')},{moment().format('LL')}
-              </b>
-            </div>
-            <div className="column" style={{ textAlign: 'right' }}>
-              <b> {weatherData.weather[0].main}</b>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column">
-              Temperature: {weatherData.main.temp} &deg;C
-            </div>
-            <div className="column" style={{ textAlign: 'right' }}>
-              Humidity: {weatherData.main.humidity} %
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column">
-              Sunrise:{' '}
-              {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString(
-                'en-IN'
-              )}
-            </div>
-            <div className="column" style={{ textAlign: 'right' }}>
-              Sunset:{' '}
-              {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString(
-                'en-IN'
-              )}
-            </div>
-          </div>
+          <h1 className="title has-text-white" style={{ fontSize: '5em' }}>
+            {weatherData.main.temp} &deg;
+          </h1>
+          <h6
+            className="subtitle has-text-white"
+            style={{ marginBottom: '2px' }}
+          >
+            {weatherData.weather[0].main}
+          </h6>
+          <hr style={{ margin: '0px', height: '1px' }} />
+          <p>
+            Humidity: {weatherData.main.humidity} % Sunset:{' '}
+            {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString(
+              'en-IN'
+            )}
+          </p>
         </div>
       </div>
     </div>
